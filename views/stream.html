@@ -1,0 +1,15 @@
+<% include header.html %>
+
+<article>
+  <h3><%= stream.name %></h3>
+
+  <ul class="files">
+  <% stream.files.forEach(function(file) { %>
+    <li class="file">
+      <a href="<%= '/stream/'+stream.id+'/file/'+file.id %>"><%= file.name %></a>
+    </li>
+  <% }); %>
+  </ul>
+</article>
+
+<% include footer.html %>

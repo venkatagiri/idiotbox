@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+  <title>Idiot Box</title>
+
+  <base href="/" />
+  <meta name="description" content="Stream videos from your torrent files." />
+  <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+
+  <link rel="icon" type="image/png" href="logo.png">
+
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+  <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+  <header>
+    <h1><img src="logo.png" class="logo" />Idiot Box</h1>
+
+    <% if(msg) { %>
+    <div class="notification">
+      <span><%= msg %></span>
+    </div>
+    <% } %>
+  </header>
+  <main>
