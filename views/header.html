@@ -9,8 +9,14 @@
 
   <link rel="icon" type="image/png" href="logo.png">
 
-  <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+  <link href='//fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
   <link href="style.css" rel="stylesheet" type="text/css">
+
+  <!-- VideoJS Player -->
+  <% if(typeof stream !== 'undefined') { %>
+  <link href="//vjs.zencdn.net/4.10/video-js.css" rel="stylesheet">
+  <script src="//vjs.zencdn.net/4.10/video.js"></script>
+  <% } %>
 </head>
 <body>
   <header>

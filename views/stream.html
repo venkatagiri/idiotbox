@@ -3,13 +3,16 @@
 <article>
   <h3><%= stream.name %></h3>
 
-  <ul class="files">
-  <% stream.files.forEach(function(file) { %>
-    <li class="file">
-      <a href="<%= '/stream/'+stream.id+'/file/'+file.id %>"><%= file.name %></a>
-    </li>
-  <% }); %>
-  </ul>
+  <video id="video-stream"
+    class="video-js vjs-default-skin vjs-big-play-centered"
+    controls autoplay preload="auto" width="640" height="360"
+    data-setup="{}">
+    <source src="<%= stream.mainFile.url %>" type="<%= stream.mainFile.mimeType %>" />
+    <p class="vjs-no-js">
+      To view this video please enable JavaScript, and consider upgrading to a web browser that
+      <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+    </p>
+  </video>
 </article>
 
 <% include footer.html %>

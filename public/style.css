@@ -28,7 +28,7 @@ p {
 
 /* Header */
 header {
-  margin: 5em 0 1em;
+  margin: 1em 0 1em;
 }
 h1 {
   color: #444;
@@ -45,6 +45,10 @@ h1 span {
   width: 128px;
   vertical-align: middle;
   margin-right: 10px;
+}
+h3 {
+  font-weight: normal;
+  margin: 0.5em 0;
 }
 
 /* Main */
@@ -80,6 +84,9 @@ footer {
 }
 
 /* Form */
+.form-link {
+  margin: 4em 0;
+}
 .link {
   width: 80%;
   padding: .5em .6em;
@@ -103,9 +110,7 @@ footer {
   border: 1px solid #444;
 }
 
-/* Download Options */
-.list {
-  list-style-type: upper-roman;
-  margin-left: 30px;
-  text-align: left;
+/* Video Player */
+#video-stream {
+  margin: 0 auto;
 }
