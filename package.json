@@ -2,18 +2,24 @@
   "name": "idiotbox",
   "version": "0.0.29",
   "description": "Stream videos from your torrent files.",
+  "author": "Venkata Giri Reddy",
+  "license": "MIT",
   "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/venkatagiri/idiotbox.git"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "MIT",
+  "engines": {
+    "node": "0.10.x",
+    "npm": "1.2.x"
+  },
   "dependencies": {
     "ejs": "~0.8.5",
     "express": "^3.5.0",
-    "fluent-ffmpeg": "^2.0.0-rc2",
     "magnet-uri": "^3.0.0",
-    "request": "~2.34.0",
     "torrent-stream": "^0.15.1"
   }
 }
