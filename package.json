@@ -1,7 +1,7 @@
 {
   "name": "idiotbox",
   "version": "0.0.29",
-  "description": "Stream videos from your torrent files.",
+  "description": "Stream/Download videos from magnet links.",
   "author": "Venkata Giri Reddy",
   "license": "MIT",
   "main": "index.js",
@@ -11,10 +11,6 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "engines": {
-    "node": "0.10.x",
-    "npm": "2.1.x"
   },
   "dependencies": {
     "ejs": "~0.8.5",
