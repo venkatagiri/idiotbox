@@ -12,6 +12,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "engines": {
+    "node": "0.12.x"
+  },
   "dependencies": {
     "ejs": "~0.8.5",
     "express": "^3.5.0",
