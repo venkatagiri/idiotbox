@@ -1,0 +1,7 @@
+{
+  "name": "idiotbox",
+  "description": "Stream/Download videos from magnet links",
+  "repository": "https://github.com/venkatagiri/idiotbox",
+  "logo": "https://rawgithub.com/venkatagiri/idiotbox/master/public/logo.png",
+  "keywords": ["stream", "torrent", "download", "magnet"]
+}
