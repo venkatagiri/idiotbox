@@ -10,7 +10,8 @@
     "url": "git://github.com/venkatagiri/idiotbox.git"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "PORT=8081 node index.js"
   },
   "engines": {
     "node": "0.12.x"
