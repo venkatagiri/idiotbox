@@ -1,13 +1,19 @@
 <% include header.html %>
 
-<article>
-  <h3 class="title"><%= stream.name %></h3>
+<aside>
+  <% Object.keys(show_list).forEach(function(show_name) { %>
+    <h3><%= show_name %></h3>
+    <% show_list[show_name].forEach(function(episode) { %>
+      <a href="portal#<%= episode.hash %>" onclick="document.querySelector('video').src='/video/<%= episode.hash %>';"><%= episode.number + ' ' + episode.title %></a> <br />
+    <% }); %>
+  <% }); %>
+</aside>
 
+<article class="pull-right">
   <video id="video-stream"
     class="video-js vjs-default-skin vjs-big-play-centered"
     controls autoplay preload="auto" width="640" height="360"
     data-setup="{}">
-    <source src="<%= stream.video.url %>" type="<%= stream.video.mimeType %>" />
     <p class="vjs-no-js">
       To view this video please enable JavaScript, and consider upgrading to a web browser that
       <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>

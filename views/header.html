@@ -13,13 +13,12 @@
   <link href="style.css" rel="stylesheet" type="text/css">
 
   <!-- VideoJS Player -->
-  <% if(typeof stream !== 'undefined') { %>
   <link href="//vjs.zencdn.net/4.10/video-js.css" rel="stylesheet">
   <script src="//vjs.zencdn.net/4.10/video.js"></script>
-  <% } %>
 </head>
 <body>
   <header>
+    <p class="by">built by <a href="http://venkatagiri.me" target="_blank">venkatagiri</a></p>
     <h1><img src="logo.png" class="logo" />Idiot Box</h1>
 
     <% if(msg) { %>
