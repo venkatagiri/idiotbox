@@ -3,8 +3,10 @@
 <aside>
   <% Object.keys(show_list).forEach(function(show_name) { %>
     <h3><%= show_name %></h3>
-    <% show_list[show_name].forEach(function(episode) { %>
-      <a href="portal#<%= episode.hash %>" onclick="document.querySelector('video').src='/video/<%= episode.hash %>';"><%= episode.number + ' ' + episode.title %></a> <br />
+    <% Object.keys(show_list[show_name]).forEach(function(episode_number) {
+        episode = show_list[show_name][episode_number]
+    %>
+      <a href="portal#<%= episode.hash %>" onclick="document.querySelector('video').src='/video/<%= episode.hash %>';"><%= episode_number + ' ' + episode.title %></a> <br />
     <% }); %>
   <% }); %>
 </aside>

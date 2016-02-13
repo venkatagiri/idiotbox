@@ -19,8 +19,9 @@
   "dependencies": {
     "ejs": "~0.8.5",
     "express": "^3.5.0",
-    "magnet-uri": "^3.0.0",
     "feed-read": "^0.0.1",
+    "jsonfile": "^2.2.3",
+    "magnet-uri": "^3.0.0",
     "torrent-stream": "^0.15.1"
   }
 }
