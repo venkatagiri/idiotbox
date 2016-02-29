@@ -72,9 +72,10 @@ main {
 
 aside {
   float: left;
-  width: 300px;
+  max-width: 300px;
   text-align: left;
   font-size: 70%;
+  margin-right: 2em;
 }
 
 aside h3 {
@@ -82,12 +83,12 @@ aside h3 {
   margin: 2em 0 0.5em;
 }
 
-aside h3:first-child {
-  margin-top: 0em;
+aside .show:first-child {
+  margin-top: -2em;
 }
 
-.pull-right {
-  float: right;
+article {
+  float: left;
 }
 
 /* Notifications */
