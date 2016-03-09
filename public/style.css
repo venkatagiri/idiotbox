@@ -75,16 +75,20 @@ aside {
   max-width: 300px;
   text-align: left;
   font-size: 70%;
-  margin-right: 2em;
+  margin-left: 2em;
 }
 
 aside h3 {
   font-weight: bold;
-  margin: 2em 0 0.5em;
+  margin: 1em 0 0.5em 0;
 }
 
 aside .show:first-child {
-  margin-top: -2em;
+  margin-top: -1.5em;
+}
+
+.show .show_list {
+  margin-bottom: 2em;
 }
 
 article {

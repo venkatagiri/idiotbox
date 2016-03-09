@@ -1,19 +1,6 @@
 <% include header.html %>
 
-<aside>
-  <% Object.keys(show_list).sort().forEach(function(show_name) { %>
-  <section class="show">
-    <h3><%= show_name %></h3>
-    <% Object.keys(show_list[show_name]).sort().forEach(function(episode_number) {
-        episode = show_list[show_name][episode_number]
-    %>
-      <a href="#<%= episode.hash %>" onclick="document.querySelector('video').src='video/<%= episode.hash %>';"><%= episode_number + ' ' + episode.title %></a> <br />
-    <% }); %>
-  </section>
-  <% }); %>
-</aside>
-
-<article class="pull-right">
+<article>
   <video id="video-stream"
     class="video-js vjs-default-skin vjs-big-play-centered"
     controls autoplay preload="auto" width="640" height="360"
@@ -24,5 +11,31 @@
     </p>
   </video>
 </article>
+
+<aside>
+  <% Object.keys(show_list).sort().forEach(function(show_name) { %>
+  <section class="show">
+    <h3><%= show_name %> (<span class="expand">+</span>)</h3>
+    <div class="show_list" style="display:none;">
+    <% Object.keys(show_list[show_name]).sort().forEach(function(episode_number) {
+        episode = show_list[show_name][episode_number]
+    %>
+      <a href="#<%= episode.hash %>" onclick="document.querySelector('video').src='video/<%= episode.hash %>';"><%= episode_number + ' ' + episode.title %></a> <br />
+    <% }); %>
+    </div>
+  </section>
+  <% }); %>
+</aside>
+
+<script>
+NodeList.prototype.forEach = Array.prototype.forEach;
+document.querySelectorAll('.show h3').forEach(function(el) { el.onclick = showHide.bind(el); });
+function showHide() {
+  var show = false;
+  if(this.querySelector('.expand').innerHTML == '+') show = true;
+  this.parentNode.querySelector('.show_list').style.display = show ? 'block' : 'none';
+  this.querySelector('.expand').innerHTML = show ? '-' : '+';
+}
+</script>
 
 <% include footer.html %>
